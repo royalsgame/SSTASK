@@ -24,18 +24,6 @@
         float: right;
         color: white;
       }
-      body > div#slide1 > hr#top {
-        top: 50px;
-        float: right;
-        width: 40%;
-        border: 3px solid white;
-      }
-      body > div#slide1 > hr#bottom {
-        top: 450px;
-        float: right;
-        width: 40%;
-        border: 3px solid white;
-      }
       body > div#slide1 > div {
         height: 400px;
       }
@@ -51,18 +39,6 @@
         height: 100vh;
         float: right;
         color: black;
-      }
-      body > div#slide2 > hr#top {
-        top: 50px;
-        left: 500px;
-        width: 40%;
-        border: 3px solid black;
-      }
-      body > div#slide2 > hr#bottom {
-        top: 650px;
-        left: 500px;
-        width: 40%;
-        border: 3px solid black;
       }
       ol {
         float: right;
@@ -82,6 +58,73 @@
         float: right;
         color: white;
       }
+      hr#top {
+        top: 50px;
+        left: 500px;
+        width: 40%;
+        border: 3px solid black;
+      }
+      hr#bottom {
+        top: 450px;
+        float: right;
+        width: 40%;
+        border: 3px solid black;
+      }
+      body > div#slide1 > hr#top {
+        top: 50px;
+        float: right;
+        width: 40%;
+        border: 3px solid white;
+      }
+      body > div#slide1 > hr#bottom {
+        top: 450px;
+        float: right;
+        width: 40%;
+        border: 3px solid white;
+      }
+      button#previous {
+        display: none;
+        vertical-align: center;
+        left: 10vw;
+        width: 3vw;
+        height: 3vh;
+      }
+      button#next {
+        display: none;
+        vertical-align: center;
+        left: calc(100% - 10vw);
+        width: 3vw;
+        height: 3vh;
+      }
+      button#previous:hover {
+        display: block;
+        animation: grow 5s;
+        animation-timing-function: cubic-bezier(0.5, -0.5, 0.5, 1.5);
+        animation-iteration-count: 1;
+      }
+      button#next:hover {
+        display: block;
+        animation: grow 5s;
+        animation-timing-function: cubic-bezier(0.5, -0.5, 0.5, 1.5);
+        animation-iteration-count: 1;
+      }
+      @keyframes grow {
+        0% {
+          transform: scale(1.2)
+        }
+        20% {
+          transform: scale(1.5)
+        }
+        50% {
+          transform: scale(2.0)
+        }
+        80% {
+          transform: scale(3.0)
+        }
+        100% {
+          transform: scale(5.0)
+        }
+      }
     </style>
   </head>
   <body>
@@ -93,10 +136,12 @@
           <h5>By: Andre, Ruilun, Keegan, Yifan, Xiangcheng, Jingxiang</h5>
         </div>
         <hr id="bottom">
+        <button id="next" onclick="next()"> > </button>
       </div>
     </div>
     <div id="slide2">
       <hr id="top">
+      <button id="previous" onclick="previous()"> < </button>
       <header><h1>Contents</h1></header>
         <div>
           <ol>
@@ -106,10 +151,12 @@
             <li>Significance of Greek Scientific Inventions today</li>
           </ol>
           <hr id="bottom">
+          <button id="next" onclick="next()"> > </button>
         </div>
     </div>
     <div id="slide3">
       <hr id="top">
+      <button id="previous" onclick="previous()"> < </button>
       <header>Background on Ancient Greece: Its Origins</header>
       <div>
         <h5>Ancient Greece started around 1600 BC, and it has<br>
@@ -121,6 +168,8 @@
           architecture, and medicine. These discoveries have affected<br>
           many aspects in modern day life.
         </h5>
+        <hr id="bottom">
+        <button id="next" onclick="next()"> > </button>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
