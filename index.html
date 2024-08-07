@@ -83,26 +83,28 @@
         border: 3px solid white;
       }
       button#previous {
-        display: none;
+        z-index: -1;
         vertical-align: center;
         left: 10vw;
         width: 3vw;
         height: 3vh;
       }
       button#next {
-        display: none;
+        z-index: -1;
         vertical-align: center;
         left: calc(100% - 10vw);
         width: 3vw;
         height: 3vh;
       }
       button#previous:hover {
+        z-index: 1;
         display: block;
         animation: grow 5s;
         animation-timing-function: cubic-bezier(0.5, -0.5, 0.5, 1.5);
         animation-iteration-count: 1;
       }
       button#next:hover {
+        z-index: 1;
         display: block;
         animation: grow 5s;
         animation-timing-function: cubic-bezier(0.5, -0.5, 0.5, 1.5);
@@ -136,12 +138,12 @@
           <h5>By: Andre, Ruilun, Keegan, Yifan, Xiangcheng, Jingxiang</h5>
         </div>
         <hr id="bottom">
-        <button id="next" onclick="next()"> > </button>
+        <button id="next" onclick="next()">  </button>
       </div>
     </div>
     <div id="slide2">
       <hr id="top">
-      <button id="previous" onclick="previous()"> < </button>
+      <button id="previous" onclick="previous()">  </button>
       <header><h1>Contents</h1></header>
         <div>
           <ol>
@@ -151,12 +153,12 @@
             <li>Significance of Greek Scientific Inventions today</li>
           </ol>
           <hr id="bottom">
-          <button id="next" onclick="next()"> > </button>
+          <button id="next" onclick="next()">  </button>
         </div>
     </div>
     <div id="slide3">
       <hr id="top">
-      <button id="previous" onclick="previous()"> < </button>
+      <button id="previous" onclick="previous()">  </button>
       <header>Background on Ancient Greece: Its Origins</header>
       <div>
         <h5>Ancient Greece started around 1600 BC, and it has<br>
@@ -169,15 +171,20 @@
           many aspects in modern day life.
         </h5>
         <hr id="bottom">
-        <button id="next" onclick="next()"> > </button>
+        <button id="next" onclick="next()">  </button>
       </div>
     </div>
     <script>
       function next() {
         if (location.hash = #slide2) {
           location.hash = #slide3;
-        } else if (location.hash = #slide2) {
-          loca
+        } else if (location.hash = #slide3) {
+          location.hash = #slide4;
+        } else if (location.hash = #slide4) {
+          location.hash = #slide5
+        } else {
+          location.hash = #slide2
+        }
     </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
